@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 22: expected a keyword argument, colon, or end of line.
-    text xpos 500  ypos 500 "cambiar dia"
-              ^
+File "game/intro.rpy", line 28: expected ':' not found.
+    label intro tres:
+                ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Aug 18 16:59:23 2020
+Wed Aug 26 02:13:58 2020
