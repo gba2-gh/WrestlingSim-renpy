@@ -2,10 +2,11 @@
 label intro_uno:
     "Aquì comienza la historia,serà contada comouna vn"
     "Al final del dìa te encuentras en tu cuarto"
-    $turn =2
-    jump cuarto
 
-label intro_dos:
+    jump room
+
+label intro_dos:###encuentro con dos
+    $turn= 1
     scene bg_room at truecenter
     "Historia del segundo dia"
     "Deberia ir a la zona comercial"
@@ -17,6 +18,7 @@ label intro_dos:
     "Me voy"
     hide bg_commercial_zone
 
+    $turn=3
     show bg_room at truecenter
     with dissolve
     with Pause(2)
@@ -25,25 +27,28 @@ label intro_dos:
     jump day_transition
 
 
-label intro_tres:
+label intro_tres: ###primer dia de escuela
     scene bg_room at truecenter
     "Mejor me apresuro a la escuela!"
     "Me acompaña otaku?"
+    hide bg_room
 
     show bg_school at truecenter
     with dissolve
     with Pause(2)
     "Aqui es "
-    "blablablachica 1 y 2, voy a buscar mi clase"
+    "blablabla chica 1 y 2, voy a buscar mi clase"
     hide bg_school
+    jump school_main
 
-
+label intro_tres_2: ###en salon de clases
     show bg_classroom at truecenter
     with dissolve
     "yada yada clase"
 
     hide bg_classroom
 
+    $turn=3
     show bg_school at truecenter
     with dissolve
     with Pause(2)
@@ -51,6 +56,10 @@ label intro_tres:
 
     hide bg_school
 
+    show bg_room at truecenter
+    $turn =4
     "buen dia bla bla"
 
-    jump day_transition
+    call day_transition
+
+label intro_4: ###te pide

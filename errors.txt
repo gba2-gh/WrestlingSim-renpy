@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/intro.rpy", line 28: expected ':' not found.
-    label intro tres:
-                ^
+File "game/school.rpy", line 9: u'display_quests' is not a keyword argument or valid child for the screen statement.
+    display_quests("school_main")
+                  ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Aug 26 02:13:58 2020
+Thu Aug 27 02:12:05 2020
