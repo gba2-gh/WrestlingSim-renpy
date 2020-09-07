@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/school.rpy", line 9: u'display_quests' is not a keyword argument or valid child for the screen statement.
-    display_quests("school_main")
-                  ^
+File "game/quests.rpy", line 73: u'texto' is not a keyword argument or valid child for the for statement.
+    texto= quest.name
+         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Aug 27 02:12:05 2020
+Mon Sep 07 11:46:29 2020

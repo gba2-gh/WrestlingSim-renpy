@@ -37,3 +37,12 @@ screen day_transition_screen():
 
 
     timer 1 repeat False action Jump("room")
+
+
+
+
+label test_quest_label:
+    scene bg_corridor_1r at truecenter
+    "DONDE ESTABAS AAAAH"
+    "Haz esto y lo otro"
+    jump corridor_1r

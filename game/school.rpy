@@ -6,18 +6,11 @@ label school_main:
     call screen school_main_screen
 
 screen school_main_screen():
-    $display_quest("school_main")
-    for quest in quest_todo_display:
-        $texto= quest.name
-        textbutton "[texto]" xpos 1000 action NullAction()
-
+    use display_quest("school_main")
     textbutton "Girl" xpos 300 ypos 300 action [SetVariable("girl_aff", girl_aff + 1), Notify("Girl aff +1"), SetVariable("turn" , turn +1), Jump("room")]
     textbutton "Entrada" xpos 300  ypos 400 action Jump("door_school_main")
     textbutton "Pizarrón" xpos 300  ypos 500 action Jump("board_school_main")
     textbutton "Pasillo Derecha" xpos 500  ypos 400 action Jump("corridor_r_school_main")
-
-    if day == 4:
-        textbutton "Heroína" xpos 500  ypos 500 action Jump("Ayuda, ayuda, te veo despuès")
 
 
 label school_classroom:
@@ -37,7 +30,6 @@ label school_classroom:
 
     "clase,clase,si o no"
 
-
     $turn= set_turn(turn, 2)
     jump school_main
 
@@ -46,13 +38,15 @@ label corridor_1r:
     scene bg_corridor_1r at truecenter
     call screen corridor_1r_screen
 
+
 screen corridor_1r_screen():
-    $display_quest("corridor_1r")
-    for quest in quest_todo_display:
-        $texto= quest.name
-        textbutton "[texto]" xpos 1000 action NullAction()
+
+    use display_quest("corridor_1r")
+
     textbutton "Classroom" xpos 300  ypos 300 action Jump("school_classroom")
     textbutton "Main Hall" xpos 300  ypos 400 action Jump("school_main")
+
+
 
 ########## PLAYER INTERACTION
 ############################
